@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cartable</title>
+    <style>table th, table td {padding: 5px;}</style>
+</head>
+<body>
+<h1>th:each</h1>
+<table border="1">
+    <tr>
+        <th>serial</th>
+        <th>model</th>
+        <th>color</th>
+    </tr>
+    <tr th:each="car, state : ${carlist}">
+        <td th:utext="${car.getSerial}">serial</td>
+        <td th:utext="${car.getModel}">model</td>
+        <td th:utext="${car.getColor}">color</td>
+    </tr>
+</table>
+
+</body>
+</html>
